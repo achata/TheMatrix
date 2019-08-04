@@ -20,7 +20,7 @@ function setup() {
     x += symbolSize;
 
   }
-  
+
 }
 var c=0;
 var e=0;
@@ -33,7 +33,7 @@ function draw() {
   if(frameCount>=120){
     textSize(60+(c++));
     textAlign(CENTER, CENTER);
-    text("THE MATRIX", width/2, height/2-(e++));
+    text("ACHATA", width/2, height/2-(e++));
   }
 }
 
@@ -46,7 +46,7 @@ function Symbol(x,y,speed,first){
   this.first = first;
 
   this.setToRandomSymbol = function(){
-    if(frameCount % this.switchInterval == 0){ 
+    if(frameCount % this.switchInterval == 0){
       this.value = String.fromCharCode(
         0x30A0 + round(random(0,90))
       );
@@ -64,7 +64,7 @@ function Symbol(x,y,speed,first){
 
 function Stream(){
   this.symbols = [];
-  this.totalSymbols = round(random(5,maxSymbols)); 
+  this.totalSymbols = round(random(5,maxSymbols));
   this.speed = random(5,maxSpeed+5);
 
   this.generateSymbols = function(x,y){
